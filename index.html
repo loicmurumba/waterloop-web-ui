@@ -2,27 +2,189 @@
 <html>
 <head>
 <!-- 
-	2 		Temperature Sensor  
-	2 		Solenoid Pin 
-	3 		IMU  
-	4 		Motor (+Internal Temp Sensor) 
-	1 or 4	Speed Controller
-	2 		Distance Sensors  
-	2 		Pressure Sensors  
-	1 		DPRs 
-	4 or 2 	Distance Sensors 
-	? 		Voltage
-	2 		Temperature Sensor 
-	1 		Pressure Sensor 
-	1		Current (shunt resist circuit) 
-	4 		Optical sensor
+	2 		Temperature Sensor brake		y
+	2 		Solenoid Pin 					y
+	3 		IMU  					
+	4 		Motor (+Internal Temp Sensor)	y 
+	1 or 4	Speed Controller				y	
+	2 		Distance Sensors  				y
+	2 		Pressure Sensors  				y
+	4 or 2 	Distance Sensors 				y	
+	? 		Voltage							y	
+	2 		Temperature Sensor battery		y
+	1 		Pressure Sensor battery			y
+	1		Current (shunt resist circuit) 	y
+
 	? 		IMU
 -->
-	<link rel="stylesheet" type="text/css" href="styles.css">
+<style type="text/css">
+	.container{
+	position: absolute;
+}
+h2{
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+	
+	border:0;
+	text-align: center;
+	transform: translateY(50%);
+}
+div{
+		
+		box-sizing: border-box;
+}
+.item{
+	position: absolute;
+	background-color: #aaa;
+	border-bottom: solid black 1px;
+	border-right: solid black 1px;
+}
+#first-row{
+	top: 0%;
+	height:20%;
+	width: 100%;
+	padding: 0;
+	margin:0;
+	background-color: #eee;
+	border-bottom: solid black 1px;
+	}
+#second-row{
+	top: 20%;
+	height:50%;
+	width: 100%;
+	padding: 0;
+	margin:0;
+	background-color: #ddd;
+	}
+#third-row{
+	top: 70%;
+	height:30%;
+	width: 100%;
+	padding: 0;
+	margin:0;
+	background-color: #ccc;
+	}
+body{
+	margin: 0;
+	padding: 0;
+
+}
+.item{
+	
+}
+#speed{
+	right:0;
+	width: 33%;
+	top:0;
+	background-color: #ccc;
+	height: 100%;
+	border-bottom: 0;
+}
+#pressure{
+	right: 33%;
+	border-left: solid black 1px;
+	width: 33%;
+	border-bottom: 0;
+	top:0;
+	background-color: #ddd;
+	height: 100%;
+}
+#waterloop{
+	background-image: url("https://pbs.twimg.com/profile_images/692413096309211136/ZiyCQCV1.jpg");
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	left: 4.5%;
+	width: 25%;
+	top:0;
+	border-left:solid black 1px;
+	height: 60%;
+}
+#temp1{
+width:5%;
+height: 100%;
+
+}
+#temp2{
+background-color: #bbb;
+width:5%;
+left: 5%;
+height: 100%;
+}
+#video-container{
+	width: 40%;
+	left: 10%;
+	height: 100%;
+	background-color: #fff;
+}
+#brakes{
+height: 80%;
+width:25%;
+left:50%;
+background-color: #ddd;
+}
+
+#lateral-control{
+height: 80%;
+width:25%;
+
+left:75%;
+}
+#motor-temp{
+	width: 50%;
+	height: 20%;
+	left: 50%;
+	top: 80%;
+		background-color: #ddd;
+}
+#current{
+width: 50%;
+height: 100%;
+right: 0;
+background-color: #bbb;
+}
+#voltage{
+width: 50%;
+height:25%;
+top: 75%;
+
+}
+#battery-pressure{
+	height: 75%;
+	width: 50%;
+	background-color: #eee;
+}
+
+
+</style>
+<!-- <link rel="stylesheet" type="text/css" href="styles.css">
+ -->
 	<script type="text/javascript" src="scripts.js"></script>
 	<title>Waterloop Web UI</title>
 </head>
 <body>
-
+	<div id="first-row" class="container">
+	<div id="waterloop" class="item"><h2></h2></div>
+		<div id="speed" class="item"><h2>Speed</h2></div>
+		<div id="pressure" class="item"><h2>Pressure</h2></div>
+		
+	</div>
+	<div id="second-row" class="container">
+		<div id="temp1" class="item"><h2>Battery Temp1</h2></div>
+		<div id="temp2" class="item"><h2>Battery Temp2</h2></div>
+		
+		<div id="video-container" class="item"><h2>Live Video</h2></div>
+		<!-- <div id="distance" class="item"><h2>Speed</h2></div> -->
+		<div id="brakes" class="item"><h2>Brakes Moving Image</h2></div>
+		<div id="lateral-control" class="item"><h2>Lateral Control Moving Image</h2></div>
+		<div id="motor-temp" class="item"><h2>Motor Temperature</h2></div>
+	</div>
+	<div id="third-row" class="container">
+		<div id="battery-pressure" class="item"><h2>Battery Pressure</h2></div>
+		<div id="voltage" class="item"><h2>Voltage</h2></div>
+		<div id="current" class="item"><h2>Current</h2></div>
+		
+	</div>
 </body>
 </html>
