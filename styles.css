@@ -10,15 +10,32 @@ h2{
 	text-align: center;
 	transform: translateY(50%);
 }
+.white-border{
+	display: block;
+	border-right: solid white 1px;
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	border-top: 0;
+	border-bottom: 0;
+	top: 10%;
+
+}
+#video-border{
+	border-right: 0;
+}
+
+.white-border.both{
+
+	border-left: solid white 1px;
+}
 div{
-		
+		background-color: #ccc;
 		box-sizing: border-box;
 }
 .item{
 	position: absolute;
-	background-color: #aaa;
-	border-bottom: solid black 1px;
-	border-right: solid black 1px;
+	
 }
 #first-row{
 	top: 0%;
@@ -26,8 +43,7 @@ div{
 	width: 100%;
 	padding: 0;
 	margin:0;
-	background-color: #eee;
-	border-bottom: solid black 1px;
+	border-bottom: solid white 1px;
 	}
 #second-row{
 	top: 20%;
@@ -35,7 +51,6 @@ div{
 	width: 100%;
 	padding: 0;
 	margin:0;
-	background-color: #ddd;
 	}
 #third-row{
 	top: 70%;
@@ -43,7 +58,6 @@ div{
 	width: 100%;
 	padding: 0;
 	margin:0;
-	background-color: #ccc;
 	}
 body{
 	margin: 0;
@@ -57,17 +71,15 @@ body{
 	right:0;
 	width: 33%;
 	top:0;
-	background-color: #ccc;
 	height: 100%;
 	border-bottom: 0;
 }
 #pressure{
 	right: 33%;
-	border-left: solid black 1px;
+	
 	width: 33%;
 	border-bottom: 0;
 	top:0;
-	background-color: #ddd;
 	height: 100%;
 }
 #waterloop{
@@ -78,7 +90,7 @@ body{
 	left: 4.5%;
 	width: 25%;
 	top:0;
-	border-left:solid black 1px;
+	
 	height: 60%;
 }
 #temp1{
@@ -87,7 +99,6 @@ height: 100%;
 
 }
 #temp2{
-background-color: #bbb;
 width:5%;
 left: 5%;
 height: 100%;
@@ -96,13 +107,11 @@ height: 100%;
 	width: 40%;
 	left: 10%;
 	height: 100%;
-	background-color: #fff;
 }
 #brakes{
 height: 80%;
 width:25%;
 left:50%;
-background-color: #ddd;
 }
 
 #lateral-control{
@@ -116,13 +125,11 @@ left:75%;
 	height: 20%;
 	left: 50%;
 	top: 80%;
-		background-color: #ddd;
 }
 #current{
 width: 50%;
 height: 100%;
 right: 0;
-background-color: #bbb;
 }
 #voltage{
 width: 50%;
@@ -133,5 +140,4 @@ top: 75%;
 #battery-pressure{
 	height: 75%;
 	width: 50%;
-	background-color: #eee;
 }
